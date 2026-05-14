@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏥 Medical SQL Agent</title>
+    <link rel="stylesheet" href="/static/style.css?v=10">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/sql.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 헤더 -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🏥 Medical SQL Agent</h1>
+                <p class="subtitle">의료 데이터베이스와 자연어로 대화하세요</p>
+            </div>
+            <div class="status" id="status">
+                <span class="status-dot"></span>
+                <span class="status-text">연결 중...</span>
+            </div>
+        </header>
+
+        <!-- 채팅 영역 -->
+        <div class="chat-container">
+            <div class="messages initial-state" id="messages">
+                <!-- 초기 메시지 -->
+                <div class="message-group system">
+                    <div class="message system-message">
+                        <div class="message-content">
+                            <p>👋 안녕하세요! 의료 데이터 SQL Agent입니다.</p>
+                            <p>데이터베이스에 대해 자유롭게 질문해보세요.</p>
+                            <div class="example-queries">
+                                <p><strong>💡 예시 질문:</strong></p>
+                                <button class="example-btn" data-query="환자는 총 몇 명인가요?">환자는 총 몇 명인가요?</button>
+                                <button class="example-btn" data-query="고혈압 진단을 받은 환자는 몇 명인가요?">고혈압 환자는 몇 명?</button>
+                                <button class="example-btn" data-query="2026년 5월에 응급실에 온 환자는?">5월 응급실 방문 환자</button>
+                                <button class="example-btn" data-query="각 진료과별 환자 수는?">진료과별 통계</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 입력 영역 -->
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <textarea
+                        id="userInput"
+                        placeholder="질문을 입력하세요... (Enter로 전송, Shift+Enter로 줄바꿈)"
+                        rows="1"
+                    ></textarea>
+                    <button id="sendBtn" class="send-btn" disabled>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js?v=10"></script>
+</body>
+</html>

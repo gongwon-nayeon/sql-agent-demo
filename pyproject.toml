@@ -1,0 +1,25 @@
+[project]
+name = "sql-agent"
+version = "1.0.0"
+description = "강릉아산병원-SQL Agent 데모 구현"
+requires-python = ">=3.11"
+dependencies = [
+    # AI Agent 패키지
+    "langchain>=1.0.0",
+    "langchain-anthropic>=1.0.0",
+    "langchain-core>=1.0.0",
+    "langchain-community",
+    "langgraph>=1.0.0",
+    "sqlalchemy>=2.0.31",
+    "requests>=2.32.3",
+    "python-dotenv>=1.0.0",
+    "jupyter>=1.1.0",
+    "ipykernel>=6.29.0",
+    "pydantic>=2.0.0",
+    "typing-extensions>=4.12.0",
+
+    # Demo 웹 애플리케이션 패키지
+    "fastapi>=0.115.5",
+    "uvicorn[standard]>=0.32.1",
+    "websockets>=14.1",
+]
