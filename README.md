@@ -15,7 +15,7 @@
 ## 빠른 시작
 
 ### 사전 준비사항
-- Python 3.11 이상
+- Python 3.13
 - OpenAI API 키
 - Git, VS Code
 
